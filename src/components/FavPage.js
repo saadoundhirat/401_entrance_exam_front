@@ -16,7 +16,8 @@ export class FavPage extends Component {
   }
 
   componentDidMount = () => {
-    let Url = `http://localhost:8000/getAllFavDrinks`;
+    // let Url = `http://localhost:8000/getAllFavDrinks`;
+    let Url = `https://exam-back-saadoun.herokuapp.com/getAllFavDrinks`;
     axios
       .get(Url)
       .then((result) => {
@@ -32,7 +33,8 @@ export class FavPage extends Component {
   //======> DeleteFromDB
   DeleteFromDB = (id) => {
    
-    let Url = `http://localhost:8000/DeleteFromDB/${id}`;
+    // let Url = `http://localhost:8000/DeleteFromDB/${id}`;
+    let Url = `https://exam-back-saadoun.herokuapp.com/DeleteFromDB/${id}`;
     axios
       .delete(Url)
       .then((result) => {
@@ -69,7 +71,8 @@ export class FavPage extends Component {
       strDrink: event.target.name.value,
       strDrinkThumb: event.target.img.value,
     };
-    let Url = `http://localhost:8000/updateDrink`;
+    // let Url = `http://localhost:8000/updateDrink`;
+    let Url = `https://exam-back-saadoun.herokuapp.com/updateDrink`;
     axios
       .put(Url, object)
       .then((result) => {

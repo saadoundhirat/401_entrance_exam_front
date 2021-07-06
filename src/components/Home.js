@@ -12,7 +12,8 @@ export class Home extends Component {
   }
 
   componentDidMount = () => {
-    let Url = `http://localhost:8000/getAllDrinks`;
+    // let Url = `http://localhost:8000/getAllDrinks`;
+    let Url = `https://exam-back-saadoun.herokuapp.com/getAllDrinks`;
     axios
       .get(Url)
       .then((result) => {
@@ -29,7 +30,8 @@ export class Home extends Component {
   // addToFav
 
   addToFav=(object)=>{
-      let Url = `http://localhost:8000/addToFav`;
+      // let Url = `http://localhost:8000/addToFav`;
+      let Url = `https://exam-back-saadoun.herokuapp.com/addToFav`;
       axios.post(Url , object)
       .then((result) => {
         console.log(result.data);
